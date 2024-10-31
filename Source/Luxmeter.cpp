@@ -7,6 +7,7 @@
 
 Luxmeter::Luxmeter() {
     default_type = "luxmeter";
+    duree = 3;
 }
 
 Luxmeter::Luxmeter(const Luxmeter &other) {}

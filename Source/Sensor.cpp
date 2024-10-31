@@ -21,7 +21,7 @@ std::int32_t Sensor::sensor_next_id = 0; // Initialize the static variables
 float Sensor::sensor_data = 0.0f;  // Initialize the static variables
 
 //default constructor
-Sensor::Sensor() : sensor_id(sensor_next_id++) {
+Sensor::Sensor() : sensor_id(sensor_next_id++), duree(255) {
     sensor_data = 0.0f;
     default_type = "default";
     last_update_time = std::chrono::system_clock::now();
@@ -70,10 +70,18 @@ void Sensor::update() {
     // Calculate the time difference in seconds since the last update
     tpo = std::chrono::duration_cast<std::chrono::seconds>(now - last_update_time).count();
 
-    // Logic to execute action based on tpo value (elapsed time)
+    // Debugging output to verify values
+    std::cout << "Current time: " << std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count()
+              << " Last update time: " << std::chrono::duration_cast<std::chrono::seconds>(last_update_time.time_since_epoch()).count()
+              << " Time since last update (tpo): " << tpo
+              << " seconds, Duree: " << duree << std::endl;
+
+    // Check if enough time has elapsed since the last execution
     if (tpo >= duree) {
-        execute();  // Perform the sensor's task
-        last_update_time = now;  // Reset the last update time to now
+        execute();               // Perform the sensor's task
+        last_update_time = now;  // Reset the last update time only here
+        std::cout << "Executed sensor task. New sensor data: " << sensor_data << std::endl;
+        std::cout << "😇😇😇😇😇😇" << std::endl;
     } else {
         std::cout << "Waiting for next update: " << (duree - tpo) << " seconds remaining" << std::endl;
     }

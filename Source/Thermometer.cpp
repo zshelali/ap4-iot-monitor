@@ -7,6 +7,7 @@
 
 Thermometer::Thermometer() {
     default_type = "thermometer";
+    duree = 10;
 };
 
 Thermometer::Thermometer(const Thermometer &other) {

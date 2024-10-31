@@ -7,6 +7,7 @@
 #include <iostream>
 #include <ostream>
 #include <fstream>
+#include <sstream>
 #include "Sensor.hpp"
 #include <algorithm>
 
@@ -73,4 +74,52 @@ int Server::fileWrite(Sensor& sensor) {
     std::cout << "Content successfully written in file: " << path << std::endl;
 
     return 0;
+}
+
+void Server::readSensorFromTxt(const std::string& serverName) {
+    // Construct the file path based on the provided server name
+    std::string path = "../FileLogs/" + (serverName.empty() ? "UnnamedServer" : serverName) + ".txt";
+    std::ifstream file(path);
+
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open file " << path << std::endl;
+        return;
+    }
+
+    std::string line;
+    bool firstLine = true;
+
+    while (std::getline(file, line)) {
+        // Skip the header line
+        if (firstLine) {
+            firstLine = false;
+            continue;
+        }
+
+        std::stringstream ss(line);
+        std::string id_str, type, data_str;
+        int id;
+        float data;
+
+        // Parse each part of the line using ';' as a delimiter
+        std::getline(ss, id_str, ';');
+        std::getline(ss, type, ';');
+        std::getline(ss, data_str, ';');
+
+        // Convert strings to appropriate data types
+        try {
+            id = std::stoi(id_str);
+            data = std::stof(data_str);
+        } catch (const std::invalid_argument& e) {
+            std::cerr << "Error parsing line: " << line << std::endl;
+            continue;  // Skip malformed lines
+        }
+
+        // Display parsed data
+        std::cout << "Read from file - ID: " << id
+                  << ", Type: " << type
+                  << ", Data: " << data << std::endl;
+    }
+
+    file.close();
 }

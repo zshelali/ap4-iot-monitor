@@ -33,6 +33,9 @@ public:
 
     void measure(Sensor* sensor);
 
+    static void readSensorFromTxt(const std::string& serverName);
+
+
 
 private:
     std::string server_name;
