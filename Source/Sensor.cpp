@@ -75,7 +75,6 @@ void Sensor::update() {
               << " Last update time: " << std::chrono::duration_cast<std::chrono::seconds>(last_update_time.time_since_epoch()).count()
               << " Time since last update (tpo): " << tpo
               << " seconds, Duree: " << duree << std::endl;
-
     // Check if enough time has elapsed since the last execution
     if (tpo >= duree) {
         execute();               // Perform the sensor's task
