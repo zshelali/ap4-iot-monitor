@@ -7,10 +7,14 @@
 
 Luxmeter::Luxmeter() {
     default_type = "luxmeter";
-    duree = 3;
+
 }
 
 Luxmeter::Luxmeter(const Luxmeter &other) {}
+
+Luxmeter::Luxmeter(std::string name) {
+    default_type = name;
+}
 
 Luxmeter &Luxmeter::operator=(const Luxmeter &other) {}
 
@@ -20,5 +24,6 @@ void Luxmeter::execute() {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int32_t> distrib2(0,1);
-    this->light = (distrib2(gen) == 1); //returns true if random number is 1, else false
+    this->sensor_data = (distrib2(gen) == 1); //returns true if random number is 1, else false
+    std::cout << "BOOL LIGHT 💡" << this->sensor_data << std::endl;
 }

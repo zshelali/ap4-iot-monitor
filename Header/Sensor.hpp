@@ -8,6 +8,8 @@
 #include <iostream>
 // #include "Server.hpp"
 #include <string>
+#include <random>
+
 
 /*
  * Warning : Every single sensor has a unique id, even copied ones
@@ -34,7 +36,7 @@ public:
     /* /////////////////
      * Imposed functions
      */
-    void update(); //virtual ??
+    void virtual update(); //virtual ??
     void virtual execute();
 
 
@@ -48,13 +50,14 @@ protected:
      */
     std::int32_t sensor_id, tpo, duree;
     std::string default_type;
-    float static sensor_data;
+    float sensor_data;
     Server* pserver;
 
     /* /////////////////
      * Custom Attributes
      */
     static std::int32_t sensor_next_id;
+    static std::random_device rd;
     std::chrono::time_point<std::chrono::system_clock> last_update_time;  // Time of the last update
 
 

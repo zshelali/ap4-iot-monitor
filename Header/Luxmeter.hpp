@@ -12,6 +12,7 @@ class Luxmeter : public Sensor {
 
 public:
     Luxmeter();
+    Luxmeter(std::string name);
     ~Luxmeter();
     Luxmeter(const Luxmeter& other);
     Luxmeter& operator=(const Luxmeter& other);
@@ -20,8 +21,6 @@ public:
 
 
 
-private:
-    bool light;
 };
 
 

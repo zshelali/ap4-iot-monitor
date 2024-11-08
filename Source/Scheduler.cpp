@@ -26,7 +26,7 @@ void Scheduler::simulation(std::vector<std::shared_ptr<Sensor>>& sensors, Server
             server.fileWrite(*sensor);  // Send data to server
         }
 
-        // std::this_thread::sleep_for(std::chrono::seconds(10));
+          std::this_thread::sleep_for(std::chrono::seconds(1));
         // Simulate break after the second update for demo purposes
 
     }

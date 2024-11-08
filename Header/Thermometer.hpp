@@ -12,15 +12,13 @@ class Thermometer : public Sensor {
 
 public:
     Thermometer();
+    Thermometer(std::string name);
     Thermometer(const Thermometer& other);
     Thermometer& operator=(const Thermometer& other);
     ~Thermometer();
 
 
     void execute() override;
-
-private:
-    float temperature;
 
 };
 
