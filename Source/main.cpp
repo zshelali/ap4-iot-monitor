@@ -16,16 +16,16 @@ int main() {
     Server server("MyServer");
     std::string serverName = server.getName();
 
+    Server::readSensorFromTxt(serverName);
     // Add 3 Thermometers and 3 Luxmeters objects to the sensors vector
     for (int i = 0; i < 3; i++) {
         sensors.push_back(std::make_shared<Thermometer>());
         sensors.push_back(std::make_shared<Luxmeter>());
-
     }
 
     // Simulate the sensor updates
     Scheduler::simulation(sensors, server);
-    Server::readSensorFromTxt(serverName);
+
 
     return 0;
 }

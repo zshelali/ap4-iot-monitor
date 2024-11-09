@@ -19,8 +19,13 @@ public:
 
 
     void execute() override;
+    std::string getSensorData() override;
+
+private:
+    float temperature;
 
 };
+
 
 
 

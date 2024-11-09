@@ -37,18 +37,19 @@ public:
      * Imposed functions
      */
     void virtual update(); //virtual ??
-    void virtual execute();
+    void virtual execute() = 0;
 
 
     const std::int32_t getId();
     std::string getDefault();
-    float virtual getSensorData();
+    std::string virtual getSensorData();
 
 protected:
     /* //////////////////
      * Imposed attributes
      */
-    std::int32_t sensor_id, tpo, duree;
+    std::int32_t sensor_id, duree;
+    long long tpo;
     std::string default_type;
     float sensor_data;
     Server* pserver;

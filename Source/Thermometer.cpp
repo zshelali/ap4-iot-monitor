@@ -10,9 +10,14 @@ Thermometer::Thermometer() {
     duree = 1;
 };
 
+
 Thermometer::Thermometer(std::string name) {
     default_type = name;
     duree = 1;
+}
+
+std::string Thermometer::getSensorData() {
+    return std::to_string(this->temperature);
 }
 
 Thermometer::Thermometer(const Thermometer &other) {
@@ -27,7 +32,7 @@ void Thermometer::execute() {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int32_t> distrib3(0,100);
-    this->sensor_data = distrib3(gen);
-    std::cout << "TEMP 🌡️🌡️🥵: " << this->sensor_data << std::endl;
+    this->temperature = distrib3(gen);
+    std::cout << "TEMP 🌡️🌡️🥵: " << this->temperature << std::endl;
 
 }

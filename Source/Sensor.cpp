@@ -20,7 +20,7 @@
 std::int32_t Sensor::sensor_next_id = 0; // Initialize the static variables
 
 //default constructor
-Sensor::Sensor() : sensor_id(sensor_next_id++), duree(255) {
+Sensor::Sensor() : sensor_id(sensor_next_id++) {
     sensor_data = 0.0f;
     default_type = "default";
     last_update_time = std::chrono::system_clock::now();
@@ -57,8 +57,8 @@ std::ostream& operator<<(std::ostream& os, const Sensor& sensor) {
 
 
 
-float Sensor::getSensorData() {
-    return this->sensor_data;
+std::string Sensor::getSensorData() {
+    return std::to_string(this->sensor_data);
 }
 
 
@@ -78,20 +78,14 @@ void Sensor::update() {
     if (tpo >= duree) {
         this->execute();               // Perform the sensor's task
         last_update_time = now;  // Reset the last update time only here
-        std::cout << "Executed sensor task. New sensor data: " << sensor_data << std::endl;
+        //std::cout << "Executed sensor task. New sensor data: " << sensor_data << std::endl;
         std::cout << "😇😇😇😇😇😇" << std::endl;
     } else {
         std::cout << "Waiting for next update: " << (duree - tpo) << " seconds remaining" << std::endl;
     }
 }
 
-void Sensor::execute() {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<float> distrib(0,100);
-    this->sensor_data = distrib(gen);
-    std::cout << "Sensor data: " << this->sensor_data << std::endl;
-}
+
 
 
 // void Sensor::execute() {

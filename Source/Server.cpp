@@ -40,7 +40,8 @@ std::string Server::getName() {
 
 int Server::fileWrite(Sensor& sensor) {
     std::string path = "";
-    std::string to_stringData = std::to_string(sensor.getSensorData());
+    std::string to_stringData = sensor.getSensorData();
+    //std::string to_stringDuree = std::to_string(sensor.getTime());
     std::string content =
         std::to_string(sensor.getId()) + ";"
         + sensor.getDefault() + ";"
@@ -119,6 +120,7 @@ void Server::readSensorFromTxt(const std::string& serverName) {
         std::cout << "Read from file - ID: " << id
                   << ", Type: " << type
                   << ", Data: " << data << std::endl;
+
     }
 
     file.close();

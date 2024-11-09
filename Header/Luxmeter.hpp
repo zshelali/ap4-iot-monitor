@@ -19,8 +19,10 @@ public:
 
     void execute() override;
 
+    std::string getSensorData() override;
 
-
+private:
+    bool light;
 };
 
 
