@@ -12,6 +12,7 @@
 #include <ctime>
 #include <iomanip>
 #include <Thermometer.hpp>
+#include <sstream>
 #include <vector>
 
 #include "Luxmeter.hpp"
@@ -40,6 +41,16 @@ Sensor& Sensor::operator=(const Sensor& other) {
 
 Sensor::~Sensor() {}
 
+
+std::string Sensor::getTime() {
+    // Convert the time_point to a time_t for formatting
+    std::time_t time = std::chrono::system_clock::to_time_t(this->last_update_time);
+    // Format the time to a readable string
+    std::ostringstream oss;
+    oss << std::put_time(std::localtime(&time), "%Y-%m-%d/%H:%M:%S");  // Format: YYYY-MM-DD HH:MM:SS
+    return oss.str();
+}
+
 //Manual sensor, just for testing (default type)
 Sensor::Sensor(const std::string &n) : sensor_id(sensor_next_id++) {
     this->default_type = n;
@@ -57,16 +68,9 @@ std::ostream& operator<<(std::ostream& os, const Sensor& sensor) {
 
 
 
-std::string Sensor::getSensorData() {
-    return std::to_string(this->sensor_data);
-}
-
 
 void Sensor::update() {
-    // Get the current time
     const auto now = std::chrono::system_clock::now();
-
-    // Calculate the time difference in seconds since the last update
     tpo = std::chrono::duration_cast<std::chrono::seconds>(now - last_update_time).count();
 
     // Debugging output to verify values
@@ -76,8 +80,8 @@ void Sensor::update() {
     //           << " seconds, Duree: " << duree << std::endl;
     // Check if enough time has elapsed since the last execution
     if (tpo >= duree) {
-        this->execute();               // Perform the sensor's task
-        last_update_time = now;  // Reset the last update time only here
+        this->execute();
+        last_update_time = now;
         //std::cout << "Executed sensor task. New sensor data: " << sensor_data << std::endl;
         std::cout << "😇😇😇😇😇😇" << std::endl;
     } else {
@@ -105,7 +109,7 @@ std::string Sensor::getDefault() {
     return this->default_type;
 }
 
-// void sensor":ëxecute
+// void sensor execute
 // auto now =std::chrono""system_clock::now();
 // std::time_t end time_now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 //

@@ -46,6 +46,7 @@ int Server::fileWrite(Sensor& sensor) {
         std::to_string(sensor.getId()) + ";"
         + sensor.getDefault() + ";"
         + to_stringData + ";"
+        + sensor.getTime() + ";"
         + "\n";
 
     // Determine the file path based on whether the server has a name
@@ -64,7 +65,7 @@ int Server::fileWrite(Sensor& sensor) {
 
     // Write header if the file was just created and is empty
     if (outFile.tellp() == 0) {  // Check if the file is empty
-        outFile << "ID;Type;Data;\n";  // Add the header once
+        outFile << "ID;Type;Data;TimeUpdate\n";  // Add the header once
     }
 
     // Append sensor data to the file
@@ -98,7 +99,7 @@ void Server::readSensorFromTxt(const std::string& serverName) {
         }
 
         std::stringstream ss(line);
-        std::string id_str, type, data_str;
+        std::string id_str, type, data_str, time_update;
         int id;
         float data;
 
@@ -106,6 +107,7 @@ void Server::readSensorFromTxt(const std::string& serverName) {
         std::getline(ss, id_str, ';');
         std::getline(ss, type, ';');
         std::getline(ss, data_str, ';');
+        std::getline(ss, time_update, ';');
 
         // Convert strings to appropriate data types
         try {
@@ -117,9 +119,10 @@ void Server::readSensorFromTxt(const std::string& serverName) {
         }
 
         // Display parsed data
-        std::cout << "Read from file - ID: " << id
+        std::cout << "ID: " << id
                   << ", Type: " << type
-                  << ", Data: " << data << std::endl;
+                  << ", Data: " << data
+                  << ", TimeUpdate: " << time_update <<std::endl;
 
     }
 

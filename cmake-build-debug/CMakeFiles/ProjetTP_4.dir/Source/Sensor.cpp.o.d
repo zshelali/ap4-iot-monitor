@@ -1043,4 +1043,5 @@ CMakeFiles/ProjetTP_4.dir/Source/Sensor.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__chrono/literals.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/forward_list \
   /Users/zshelali/CLionProjects/ap4-iot-monitor/Header/Thermometer.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/sstream \
   /Users/zshelali/CLionProjects/ap4-iot-monitor/Header/Luxmeter.hpp

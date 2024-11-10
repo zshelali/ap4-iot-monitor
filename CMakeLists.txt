@@ -10,6 +10,8 @@ add_executable(ProjetTP_4
         Source/Server.cpp
         Source/Thermometer.cpp
         Source/Luxmeter.cpp
+        Header/Decibelmeter.hpp
+        Source/Decibelmeter.cpp
 
 
 )

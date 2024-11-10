@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.o"
+  "CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.o.d"
   "CMakeFiles/ProjetTP_4.dir/Source/Luxmeter.cpp.o"
   "CMakeFiles/ProjetTP_4.dir/Source/Luxmeter.cpp.o.d"
   "CMakeFiles/ProjetTP_4.dir/Source/Scheduler.cpp.o"

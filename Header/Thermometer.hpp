@@ -17,7 +17,6 @@ public:
     Thermometer& operator=(const Thermometer& other);
     ~Thermometer();
 
-
     void execute() override;
     std::string getSensorData() override;
 

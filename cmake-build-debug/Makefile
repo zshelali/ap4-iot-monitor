@@ -129,6 +129,30 @@ ProjetTP_4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/build
 .PHONY : ProjetTP_4/fast
 
+Source/Decibelmeter.o: Source/Decibelmeter.cpp.o
+.PHONY : Source/Decibelmeter.o
+
+# target to build an object file
+Source/Decibelmeter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.o
+.PHONY : Source/Decibelmeter.cpp.o
+
+Source/Decibelmeter.i: Source/Decibelmeter.cpp.i
+.PHONY : Source/Decibelmeter.i
+
+# target to preprocess a source file
+Source/Decibelmeter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.i
+.PHONY : Source/Decibelmeter.cpp.i
+
+Source/Decibelmeter.s: Source/Decibelmeter.cpp.s
+.PHONY : Source/Decibelmeter.s
+
+# target to generate assembly for a file
+Source/Decibelmeter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.s
+.PHONY : Source/Decibelmeter.cpp.s
+
 Source/Luxmeter.o: Source/Luxmeter.cpp.o
 .PHONY : Source/Luxmeter.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ProjetTP_4"
+	@echo "... Source/Decibelmeter.o"
+	@echo "... Source/Decibelmeter.i"
+	@echo "... Source/Decibelmeter.s"
 	@echo "... Source/Luxmeter.o"
 	@echo "... Source/Luxmeter.i"
 	@echo "... Source/Luxmeter.s"

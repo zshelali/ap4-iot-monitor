@@ -3,10 +3,8 @@
 //
 #include "Scheduler.hpp"
 #include "Server.hpp"
-#include <random>
 #include <thread>
 #include <vector>
-#include <thread>
 
 Scheduler::Scheduler() {};
 Scheduler::~Scheduler(){};
@@ -20,14 +18,12 @@ Scheduler& Scheduler::operator=(const Scheduler& other) {
 
 void Scheduler::simulation(std::vector<std::shared_ptr<Sensor>>& sensors, Server& server){
     while (true) {
-        // Update each sensor
         for (auto & sensor : sensors) {
-            sensor->update();  // Update sensor data
-            server.fileWrite(*sensor);  // Send data to server
+            sensor->update();
+            server.fileWrite(*sensor);
         }
 
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        // Simulate break after the second update for demo purposes
 
     }
 }

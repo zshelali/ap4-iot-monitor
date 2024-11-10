@@ -7,13 +7,14 @@
 
 Luxmeter::Luxmeter() {
     default_type = "luxmeter";
-
+    duree = 3;
 }
 
 Luxmeter::Luxmeter(const Luxmeter &other) {}
 
 Luxmeter::Luxmeter(std::string name) {
     default_type = name;
+    duree = 3;
 }
 
 std::string Luxmeter::getSensorData() {
