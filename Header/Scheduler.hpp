@@ -8,12 +8,15 @@
 
 #include "Sensor.hpp"
 #include <vector>
+#include <memory>
+
+
 
 class Scheduler {
     friend class Sensor;
 public:
     Scheduler();
-    Scheduler(const Scheduler& other);
+    Scheduler(const Scheduler& other); //not implemented
     Scheduler& operator=(const Scheduler& other);
     ~Scheduler();
 
