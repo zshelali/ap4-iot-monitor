@@ -8,6 +8,7 @@
 
 #include "Sensor.hpp"
 #include <vector>
+
 class Scheduler {
     friend class Sensor;
 public:

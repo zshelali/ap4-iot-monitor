@@ -11,26 +11,20 @@
 #include <chrono>
 #include <ctime>
 #include <iomanip>
-#include <Thermometer.hpp>
 #include <sstream>
-#include <vector>
 
-#include "Luxmeter.hpp"
 
 //unique id variable
 std::int32_t Sensor::sensor_next_id = 0; // Initialize the static variables
 
-//default constructor
 Sensor::Sensor() : sensor_id(sensor_next_id++) {
     sensor_data = 0.0f;
     default_type = "default";
     last_update_time = std::chrono::system_clock::now();
 }
 
-//copy constructor
 Sensor::Sensor(const Sensor& other) : sensor_id(sensor_next_id++), default_type(other.default_type){} //copied object also gets a new Id !!!!
 
-//assignment operator
 Sensor& Sensor::operator=(const Sensor& other) {
     if (this !=&other) {
         this->default_type = other.default_type;
@@ -43,9 +37,7 @@ Sensor::~Sensor() {}
 
 
 std::string Sensor::getTime() {
-    // Convert the time_point to a time_t for formatting
     std::time_t time = std::chrono::system_clock::to_time_t(this->last_update_time);
-    // Format the time to a readable string
     std::ostringstream oss;
     oss << std::put_time(std::localtime(&time), "%Y-%m-%d/%H:%M:%S");  // Format: YYYY-MM-DD HH:MM:SS
     return oss.str();

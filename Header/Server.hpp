@@ -7,7 +7,6 @@
 
 #include "Sensor.hpp"
 #include <string>
-#include <fstream>
 
 
 
@@ -27,7 +26,7 @@ public:
 
     void consoleWrite(Sensor& sensor);
 
-    int fileWrite(Sensor& sensor); //every sensor needs its own fileWrite depending on its type !
+    int fileWrite(Sensor& sensor);
 
     std::string getName();
 

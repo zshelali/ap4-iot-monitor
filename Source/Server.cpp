@@ -9,7 +9,6 @@
 #include <fstream>
 #include <sstream>
 #include "Sensor.hpp"
-#include <algorithm>
 
 Server::Server() : server_name("Server") {};
 
