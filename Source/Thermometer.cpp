@@ -36,6 +36,6 @@ void Thermometer::execute() {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int32_t> distrib3(-50,50);
     this->temperature = distrib3(gen);
-    std::cout << "TEMP 🌡️🌡️🥵: " << this->temperature << std::endl;
+    std::cout << "TEMP : " << this->temperature << std::endl;
 
 }

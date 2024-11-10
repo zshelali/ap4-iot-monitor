@@ -68,7 +68,7 @@ void Sensor::update() {
         this->execute();
         last_update_time = now;
         updated = true;
-        std::cout << "😇😇😇😇😇😇" << std::endl;
+        std::cout << "Executed" << std::endl;
     } else {
         std::cout << "Waiting for next update for : " << this->getDefault() << ">>" << (duree - tpo) << " seconds remaining" << std::endl;
     }

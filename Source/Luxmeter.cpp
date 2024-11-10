@@ -31,5 +31,5 @@ void Luxmeter::execute() {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int32_t> distrib2(0,1);
     this->light = (distrib2(gen)); //returns true if random number is 1, else false
-    std::cout << "BOOL LIGHT 💡" << this->light << std::endl;
+    std::cout << "BOOL LIGHT " << this->light << std::endl;
 }

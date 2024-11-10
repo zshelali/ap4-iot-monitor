@@ -32,6 +32,6 @@ void Decibelmeter::execute() {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int32_t> distrib3(0,100);
     this->sound = distrib3(gen);
-    std::cout << "SOUND 🔊🔔: " << this->sound << std::endl;
+    std::cout << "SOUND : " << this->sound << std::endl;
 
 }
