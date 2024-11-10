@@ -12,7 +12,7 @@
 
 
 /*
- * Warning : Every single sensor has a unique id, even copied ones
+ * Warning : Every single sensor has a unique id, even copied ones !!
  */
 
 class Server;
@@ -33,9 +33,7 @@ public:
      */
     Sensor(const std::string &n);
 
-    /* /////////////////
-     * Imposed functions
-     */
+
     void virtual update(); //virtual ??
     void virtual execute() = 0;
 
@@ -46,18 +44,14 @@ public:
     std::string getTime();
 
 protected:
-    /* //////////////////
-     * Imposed attributes
-     */
+
     std::uint32_t sensor_id, duree;
     long long tpo;
     std::string default_type;
     float sensor_data;
     Server* pserver;
 
-    /* /////////////////
-     * Custom Attributes
-     */
+
     static std::int32_t sensor_next_id;
     static std::random_device rd;
     std::chrono::time_point<std::chrono::system_clock> last_update_time;

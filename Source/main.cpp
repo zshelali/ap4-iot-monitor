@@ -33,6 +33,8 @@ int main() {
     const std::string serverName = server.getName();
 
     Server::readSensorFromTxt(serverName);
+    // the file would be empty at first, but this will work after rerunning the code
+
     //for (int i = 0; i < 2; i++) {
         sensors.push_back(std::make_shared<Thermometer>());
         sensors.push_back(std::make_shared<Luxmeter>());
