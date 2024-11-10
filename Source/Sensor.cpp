@@ -15,7 +15,7 @@
 
 
 //unique id variable
-std::int32_t Sensor::sensor_next_id = 0; // Initialize the static variables
+std::int32_t Sensor::sensor_next_id = 0;
 
 Sensor::Sensor() : sensor_id(sensor_next_id++) {
     sensor_data = 0.0f;
@@ -79,7 +79,7 @@ const std::int32_t Sensor::getId() {
     return sensor_id;
 }
 
-std::string Sensor::getDefault() {
+const std::string Sensor::getDefault() {
     return this->default_type;
 }
 

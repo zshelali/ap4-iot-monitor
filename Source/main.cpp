@@ -10,7 +10,7 @@
  * Generates a CSV file with the logs (the separator is a semicolon ";" not a comma ",")
  * Located at :
  * ap4-iot-monitor/FileLogs/server-name.csv
- * Can be opened using Excel, Numbers...
+ * Can be opened using Excel, Num
  * =========================*/
 
 
@@ -34,6 +34,8 @@ int main() {
     const std::string serverName = server.getName();
 
     Server::readSensorFromTxt(serverName);
+    //only gives the server's name
+    std::cout << server << endl;
     // the file would be empty at first, but this will work after rerunning the code
 
     //for (int i = 0; i < 2; i++) {

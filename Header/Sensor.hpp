@@ -39,7 +39,7 @@ public:
 
 
     const std::int32_t getId();
-    std::string getDefault();
+    const std::string getDefault();
     std::string virtual getSensorData() = 0;
     std::string getTime();
 
