@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ProjetTP_4
+# Target rules for targets named ap4-iot-monitor
 
 # Build rule for target.
-ProjetTP_4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ProjetTP_4
-.PHONY : ProjetTP_4
+ap4-iot-monitor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ap4-iot-monitor
+.PHONY : ap4-iot-monitor
 
 # fast build rule for target.
-ProjetTP_4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/build
-.PHONY : ProjetTP_4/fast
+ap4-iot-monitor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/build
+.PHONY : ap4-iot-monitor/fast
 
 Source/Decibelmeter.o: Source/Decibelmeter.cpp.o
 .PHONY : Source/Decibelmeter.o
 
 # target to build an object file
 Source/Decibelmeter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Decibelmeter.cpp.o
 .PHONY : Source/Decibelmeter.cpp.o
 
 Source/Decibelmeter.i: Source/Decibelmeter.cpp.i
@@ -142,7 +142,7 @@ Source/Decibelmeter.i: Source/Decibelmeter.cpp.i
 
 # target to preprocess a source file
 Source/Decibelmeter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Decibelmeter.cpp.i
 .PHONY : Source/Decibelmeter.cpp.i
 
 Source/Decibelmeter.s: Source/Decibelmeter.cpp.s
@@ -150,7 +150,7 @@ Source/Decibelmeter.s: Source/Decibelmeter.cpp.s
 
 # target to generate assembly for a file
 Source/Decibelmeter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Decibelmeter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Decibelmeter.cpp.s
 .PHONY : Source/Decibelmeter.cpp.s
 
 Source/Luxmeter.o: Source/Luxmeter.cpp.o
@@ -158,7 +158,7 @@ Source/Luxmeter.o: Source/Luxmeter.cpp.o
 
 # target to build an object file
 Source/Luxmeter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Luxmeter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Luxmeter.cpp.o
 .PHONY : Source/Luxmeter.cpp.o
 
 Source/Luxmeter.i: Source/Luxmeter.cpp.i
@@ -166,7 +166,7 @@ Source/Luxmeter.i: Source/Luxmeter.cpp.i
 
 # target to preprocess a source file
 Source/Luxmeter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Luxmeter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Luxmeter.cpp.i
 .PHONY : Source/Luxmeter.cpp.i
 
 Source/Luxmeter.s: Source/Luxmeter.cpp.s
@@ -174,7 +174,7 @@ Source/Luxmeter.s: Source/Luxmeter.cpp.s
 
 # target to generate assembly for a file
 Source/Luxmeter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Luxmeter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Luxmeter.cpp.s
 .PHONY : Source/Luxmeter.cpp.s
 
 Source/Scheduler.o: Source/Scheduler.cpp.o
@@ -182,7 +182,7 @@ Source/Scheduler.o: Source/Scheduler.cpp.o
 
 # target to build an object file
 Source/Scheduler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Scheduler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Scheduler.cpp.o
 .PHONY : Source/Scheduler.cpp.o
 
 Source/Scheduler.i: Source/Scheduler.cpp.i
@@ -190,7 +190,7 @@ Source/Scheduler.i: Source/Scheduler.cpp.i
 
 # target to preprocess a source file
 Source/Scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Scheduler.cpp.i
 .PHONY : Source/Scheduler.cpp.i
 
 Source/Scheduler.s: Source/Scheduler.cpp.s
@@ -198,7 +198,7 @@ Source/Scheduler.s: Source/Scheduler.cpp.s
 
 # target to generate assembly for a file
 Source/Scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Scheduler.cpp.s
 .PHONY : Source/Scheduler.cpp.s
 
 Source/Sensor.o: Source/Sensor.cpp.o
@@ -206,7 +206,7 @@ Source/Sensor.o: Source/Sensor.cpp.o
 
 # target to build an object file
 Source/Sensor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Sensor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Sensor.cpp.o
 .PHONY : Source/Sensor.cpp.o
 
 Source/Sensor.i: Source/Sensor.cpp.i
@@ -214,7 +214,7 @@ Source/Sensor.i: Source/Sensor.cpp.i
 
 # target to preprocess a source file
 Source/Sensor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Sensor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Sensor.cpp.i
 .PHONY : Source/Sensor.cpp.i
 
 Source/Sensor.s: Source/Sensor.cpp.s
@@ -222,7 +222,7 @@ Source/Sensor.s: Source/Sensor.cpp.s
 
 # target to generate assembly for a file
 Source/Sensor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Sensor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Sensor.cpp.s
 .PHONY : Source/Sensor.cpp.s
 
 Source/Server.o: Source/Server.cpp.o
@@ -230,7 +230,7 @@ Source/Server.o: Source/Server.cpp.o
 
 # target to build an object file
 Source/Server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Server.cpp.o
 .PHONY : Source/Server.cpp.o
 
 Source/Server.i: Source/Server.cpp.i
@@ -238,7 +238,7 @@ Source/Server.i: Source/Server.cpp.i
 
 # target to preprocess a source file
 Source/Server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Server.cpp.i
 .PHONY : Source/Server.cpp.i
 
 Source/Server.s: Source/Server.cpp.s
@@ -246,7 +246,7 @@ Source/Server.s: Source/Server.cpp.s
 
 # target to generate assembly for a file
 Source/Server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Server.cpp.s
 .PHONY : Source/Server.cpp.s
 
 Source/Thermometer.o: Source/Thermometer.cpp.o
@@ -254,7 +254,7 @@ Source/Thermometer.o: Source/Thermometer.cpp.o
 
 # target to build an object file
 Source/Thermometer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Thermometer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Thermometer.cpp.o
 .PHONY : Source/Thermometer.cpp.o
 
 Source/Thermometer.i: Source/Thermometer.cpp.i
@@ -262,7 +262,7 @@ Source/Thermometer.i: Source/Thermometer.cpp.i
 
 # target to preprocess a source file
 Source/Thermometer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Thermometer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Thermometer.cpp.i
 .PHONY : Source/Thermometer.cpp.i
 
 Source/Thermometer.s: Source/Thermometer.cpp.s
@@ -270,7 +270,7 @@ Source/Thermometer.s: Source/Thermometer.cpp.s
 
 # target to generate assembly for a file
 Source/Thermometer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/Thermometer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/Thermometer.cpp.s
 .PHONY : Source/Thermometer.cpp.s
 
 Source/main.o: Source/main.cpp.o
@@ -278,7 +278,7 @@ Source/main.o: Source/main.cpp.o
 
 # target to build an object file
 Source/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/main.cpp.o
 .PHONY : Source/main.cpp.o
 
 Source/main.i: Source/main.cpp.i
@@ -286,7 +286,7 @@ Source/main.i: Source/main.cpp.i
 
 # target to preprocess a source file
 Source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/main.cpp.i
 .PHONY : Source/main.cpp.i
 
 Source/main.s: Source/main.cpp.s
@@ -294,7 +294,7 @@ Source/main.s: Source/main.cpp.s
 
 # target to generate assembly for a file
 Source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/Source/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/Source/main.cpp.s
 .PHONY : Source/main.cpp.s
 
 # Help Target
@@ -305,7 +305,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ProjetTP_4"
+	@echo "... ap4-iot-monitor"
 	@echo "... Source/Decibelmeter.o"
 	@echo "... Source/Decibelmeter.i"
 	@echo "... Source/Decibelmeter.s"

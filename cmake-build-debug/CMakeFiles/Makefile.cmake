@@ -47,5 +47,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ProjetTP_4.dir/DependInfo.cmake"
+  "CMakeFiles/ap4-iot-monitor.dir/DependInfo.cmake"
   )

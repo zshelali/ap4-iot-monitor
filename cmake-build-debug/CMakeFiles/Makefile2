@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/zshelali/CLionProjects/ap4-iot-monitor/cmake-build-deb
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ProjetTP_4.dir/all
+all: CMakeFiles/ap4-iot-monitor.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ProjetTP_4.dir/clean
+clean: CMakeFiles/ap4-iot-monitor.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ProjetTP_4.dir
+# Target rules for target CMakeFiles/ap4-iot-monitor.dir
 
 # All Build rule for target.
-CMakeFiles/ProjetTP_4.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zshelali/CLionProjects/ap4-iot-monitor/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ProjetTP_4"
-.PHONY : CMakeFiles/ProjetTP_4.dir/all
+CMakeFiles/ap4-iot-monitor.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zshelali/CLionProjects/ap4-iot-monitor/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ap4-iot-monitor"
+.PHONY : CMakeFiles/ap4-iot-monitor.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ProjetTP_4.dir/rule: cmake_check_build_system
+CMakeFiles/ap4-iot-monitor.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zshelali/CLionProjects/ap4-iot-monitor/cmake-build-debug/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ProjetTP_4.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ap4-iot-monitor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zshelali/CLionProjects/ap4-iot-monitor/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ProjetTP_4.dir/rule
+.PHONY : CMakeFiles/ap4-iot-monitor.dir/rule
 
 # Convenience name for target.
-ProjetTP_4: CMakeFiles/ProjetTP_4.dir/rule
-.PHONY : ProjetTP_4
+ap4-iot-monitor: CMakeFiles/ap4-iot-monitor.dir/rule
+.PHONY : ap4-iot-monitor
 
 # clean rule for target.
-CMakeFiles/ProjetTP_4.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetTP_4.dir/build.make CMakeFiles/ProjetTP_4.dir/clean
-.PHONY : CMakeFiles/ProjetTP_4.dir/clean
+CMakeFiles/ap4-iot-monitor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ap4-iot-monitor.dir/build.make CMakeFiles/ap4-iot-monitor.dir/clean
+.PHONY : CMakeFiles/ap4-iot-monitor.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -10,6 +10,7 @@
  * Generates a CSV file with the logs (the separator is a semicolon ";" not a comma ",")
  * Located at :
  * ap4-iot-monitor/FileLogs/server-name.csv
+ * Can be opened using Excel, Numbers...
  * =========================*/
 
 

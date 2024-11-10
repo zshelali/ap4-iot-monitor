@@ -146,7 +146,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ProjetTP_4
+CMAKE_PROJECT_NAME:STATIC=ap4-iot-monitor
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -221,6 +221,15 @@ ProjetTP_4_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ProjetTP_4_SOURCE_DIR:STATIC=/Users/zshelali/CLionProjects/ap4-iot-monitor
+
+//Value Computed by CMake
+ap4-iot-monitor_BINARY_DIR:STATIC=/Users/zshelali/CLionProjects/ap4-iot-monitor/cmake-build-debug
+
+//Value Computed by CMake
+ap4-iot-monitor_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+ap4-iot-monitor_SOURCE_DIR:STATIC=/Users/zshelali/CLionProjects/ap4-iot-monitor
 
 
 ########################
