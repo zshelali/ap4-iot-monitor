@@ -45,7 +45,7 @@ int Server::fileWrite(Sensor& sensor) {
         std::to_string(sensor.getId()) + ";"
         + sensor.getDefault() + ";"
         + to_stringData + ";"
-        + sensor.getTime() + ";"
+        + sensor.getTime()
         + "\n";
 
     if (!this->getName().empty()) {
