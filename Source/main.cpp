@@ -14,14 +14,14 @@ using namespace std;
 int main() {
     std::vector<std::shared_ptr<Sensor>> sensors;
     Server server("MyServer");
-    std::string serverName = server.getName();
+    const std::string serverName = server.getName();
 
     Server::readSensorFromTxt(serverName);
-    for (int i = 0; i < 2; i++) {
+    //for (int i = 0; i < 2; i++) {
         sensors.push_back(std::make_shared<Thermometer>());
         sensors.push_back(std::make_shared<Luxmeter>());
         sensors.push_back(std::make_shared<Decibelmeter>());
-    }
+    //}
 
     Scheduler::simulation(sensors, server);
 

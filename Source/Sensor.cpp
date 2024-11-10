@@ -72,34 +72,16 @@ std::ostream& operator<<(std::ostream& os, const Sensor& sensor) {
 void Sensor::update() {
     const auto now = std::chrono::system_clock::now();
     tpo = std::chrono::duration_cast<std::chrono::seconds>(now - last_update_time).count();
-
-    // Debugging output to verify values
-    // std::cout << "Current time: " << std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count()
-    //           << " Last update time: " << std::chrono::duration_cast<std::chrono::seconds>(last_update_time.time_since_epoch()).count()
-    //           << " Time since last update (tpo): " << tpo
-    //           << " seconds, Duree: " << duree << std::endl;
-    // Check if enough time has elapsed since the last execution
     if (tpo >= duree) {
         this->execute();
         last_update_time = now;
-        //std::cout << "Executed sensor task. New sensor data: " << sensor_data << std::endl;
+        updated = true;
         std::cout << "😇😇😇😇😇😇" << std::endl;
     } else {
-        std::cout << "Waiting for next update: " << (duree - tpo) << " seconds remaining" << std::endl;
+        std::cout << "Waiting for next update for : " << this->getDefault() << ">>" << (duree - tpo) << " seconds remaining" << std::endl;
     }
 }
 
-
-
-
-// void Sensor::execute() {
-//     std::random_device random_device;
-//     std::mt19937 generator(random_device());
-//     std::uniform_int_distribution<> distribution(15, 30);
-//     //generated random temperature between 15 and 30
-//     int32_t temperature = distribution(generator);
-//     std::cout << "Mesure de temps" << temperature <<std::endl;
-// }
 
 const std::int32_t Sensor::getId() {
     return sensor_id;
@@ -109,11 +91,3 @@ std::string Sensor::getDefault() {
     return this->default_type;
 }
 
-// void sensor execute
-// auto now =std::chrono""system_clock::now();
-// std::time_t end time_now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-//
-// /*/
-// cout << "mesure "
-// s->mesure(this)
-// /*/

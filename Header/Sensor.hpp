@@ -61,6 +61,7 @@ protected:
     static std::int32_t sensor_next_id;
     static std::random_device rd;
     std::chrono::time_point<std::chrono::system_clock> last_update_time;
+    bool updated = false;
 
 
 };

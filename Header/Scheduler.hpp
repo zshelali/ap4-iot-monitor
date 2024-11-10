@@ -21,10 +21,6 @@ public:
     void static simulation(std::vector<std::shared_ptr<Sensor>>& sensors, Server& server);
 
 
-    /*private
-     * something
-     * Something
-     * ...
-     * */
+
 };
 #endif //SCHEDULER_HPP

@@ -20,7 +20,8 @@ void Scheduler::simulation(std::vector<std::shared_ptr<Sensor>>& sensors, Server
     while (true) {
         for (auto & sensor : sensors) {
             sensor->update();
-            server.fileWrite(*sensor);
+            if (sensor->updated) {server.fileWrite(*sensor);}
+            sensor->updated = false;
         }
 
         std::this_thread::sleep_for(std::chrono::seconds(1));

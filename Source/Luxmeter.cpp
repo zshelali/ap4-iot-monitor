@@ -6,7 +6,7 @@
 #include <random>
 
 Luxmeter::Luxmeter() {
-    default_type = "luxmeter";
+    default_type = "Luxmeter";
     duree = 3;
 }
 

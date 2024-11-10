@@ -7,7 +7,7 @@
 
 
 Thermometer::Thermometer() {
-    default_type = "thermometer";
+    default_type = "Thermometer";
     duree = 10;
 };
 

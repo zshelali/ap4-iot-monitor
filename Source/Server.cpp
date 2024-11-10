@@ -41,7 +41,6 @@ std::string Server::getName() {
 int Server::fileWrite(Sensor& sensor) {
     std::string path = "";
     std::string to_stringData = sensor.getSensorData();
-    //std::string to_stringDuree = std::to_string(sensor.getTime());
     std::string content =
         std::to_string(sensor.getId()) + ";"
         + sensor.getDefault() + ";"
@@ -49,38 +48,28 @@ int Server::fileWrite(Sensor& sensor) {
         + sensor.getTime() + ";"
         + "\n";
 
-    // Determine the file path based on whether the server has a name
     if (!this->getName().empty()) {
-        path = "../FileLogs/" + this->getName() + ".txt";
+        path = "../FileLogs/" + this->getName() + ".csv";
     } else {
-        path = "../FileLogs/UnnamedServer.txt";
+        path = "../FileLogs/UnnamedServer.csv";
     }
-
-    // Open file in append mode, which creates the file if it doesn't exist
     std::ofstream outFile(path, std::ios::app);
     if (!outFile) {
         std::cerr << "Error: Could not open or create file: " << path << std::endl;
         return 1;
     }
-
-    // Write header if the file was just created and is empty
-    if (outFile.tellp() == 0) {  // Check if the file is empty
-        outFile << "ID;Type;Data;TimeUpdate\n";  // Add the header once
+    if (outFile.tellp() == 0) {
+        outFile << "ID;Type;Data;TimeUpdate\n";
     }
-
-    // Append sensor data to the file
     outFile << content;
-
     outFile.close();
-
     std::cout << "Content successfully written in file: " << path << std::endl;
 
     return 0;
 }
 
 void Server::readSensorFromTxt(const std::string& serverName) {
-    // Construct the file path based on the provided server name
-    std::string path = "../FileLogs/" + (serverName.empty() ? "UnnamedServer" : serverName) + ".txt";
+    std::string path = "../FileLogs/" + (serverName.empty() ? "UnnamedServer" : serverName) + ".csv";
     std::ifstream file(path);
 
     if (!file.is_open()) {
@@ -92,7 +81,6 @@ void Server::readSensorFromTxt(const std::string& serverName) {
     bool firstLine = true;
 
     while (std::getline(file, line)) {
-        // Skip the header line
         if (firstLine) {
             firstLine = false;
             continue;
@@ -103,22 +91,19 @@ void Server::readSensorFromTxt(const std::string& serverName) {
         int id;
         float data;
 
-        // Parse each part of the line using ';' as a delimiter
         std::getline(ss, id_str, ';');
         std::getline(ss, type, ';');
         std::getline(ss, data_str, ';');
         std::getline(ss, time_update, ';');
 
-        // Convert strings to appropriate data types
         try {
             id = std::stoi(id_str);
             data = std::stof(data_str);
         } catch (const std::invalid_argument& e) {
             std::cerr << "Error parsing line: " << line << std::endl;
-            continue;  // Skip malformed lines
+            continue;
         }
 
-        // Display parsed data
         std::cout << "ID: " << id
                   << ", Type: " << type
                   << ", Data: " << data
