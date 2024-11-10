@@ -24,13 +24,13 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const Server& server);
 
-    void consoleWrite(Sensor& sensor);
+    //void consoleWrite(Sensor& sensor);
 
     int fileWrite(Sensor& sensor);
 
     std::string getName();
 
-    void measure(Sensor* sensor);
+    //void measure(Sensor* sensor);
 
     static void readSensorFromTxt(const std::string& serverName);
 

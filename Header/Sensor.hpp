@@ -34,7 +34,7 @@ public:
     Sensor(const std::string &n);
 
 
-    void virtual update(); //virtual ??
+    void update(); //not virtual
     void virtual execute() = 0;
 
 
